@@ -1,0 +1,34 @@
+package com.springbootdemo.playWithFile;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class Main1 {
+    public static void main(String[] args) throws IOException {
+
+        FileInputStream fileInputStream = null;
+        FileOutputStream fileOutputStream = null;
+        try {
+             fileInputStream = new FileInputStream("src/main/java/com/springbootdemo/playWithFile/Main1.java");
+             fileOutputStream = new FileOutputStream("output.txt");
+
+             int c;
+             while((c = fileInputStream.read()) != -1) {
+                 System.out.println(c);
+                 fileOutputStream.write(c);
+             }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if(fileInputStream != null) {
+                fileInputStream.close();
+            }
+             if(fileOutputStream != null) {
+                 fileOutputStream.close();
+             }
+        }
+
+    }
+}
