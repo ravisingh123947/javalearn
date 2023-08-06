@@ -1,8 +1,1 @@
-<<<<<<< Updated upstream
-ravi for explanation of all the code.
-hii
-hello
-=======
- for explanation of all the code.
-hii
->>>>>>> Stashed changes
+This file is explanation to all the code above written
