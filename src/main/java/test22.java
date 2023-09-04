@@ -22,4 +22,8 @@ public class test22 {
 
         System.out.println(VisitState.FULL_VISITED.value());
     }
+
+    public void masterFeatureAddedd() {
+        System.out.println("master feature addedd");
+    }
 }
