@@ -10,7 +10,7 @@ public class Main4 {
     public static void main(String[] args) {
         Integer lastQueueIndex = null;
 
-       int t = (lastQueueIndex != null && (lastQueueIndex + 1 <= 2) )? lastQueueIndex + 1 : 1;
+       int t = (lastQueueIndex != null && (lastQueueIndex + 1 <= 2) )? lastQueueIndex + 1 : lastQueueIndex + 2;
         System.out.println(t);
 
     }

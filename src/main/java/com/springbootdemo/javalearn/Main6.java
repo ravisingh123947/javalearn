@@ -48,7 +48,10 @@ public class Main6 {
 
 
 //        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
-//        Integer result = numbers.stream().reduce(5,(a,b) -> a+b);
+//        Integer result = numbers.stream().reduce(5,(a,b) -> {
+//            System.out.println(a + "   "  + b);
+//            return a+b;
+//        });
 //        System.out.println(result);
 
 
@@ -57,9 +60,9 @@ public class Main6 {
 //        System.out.println("****************");
 //        numbers.stream().forEach(System.out::println);
 
-        Function<Integer,Double> makeHalf = number -> number/2.0;
-        makeHalf = makeHalf.andThen(number -> number*3);
-        System.out.println(makeHalf.apply(2));
+//        Function<Integer,Double> makeHalf = number -> number/2.0;
+//        makeHalf = makeHalf.andThen(number -> number*3);
+//        System.out.println(makeHalf.apply(2));
 
     }
 }
