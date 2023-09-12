@@ -12,6 +12,7 @@ public class HashSet1 {
         hashSet.add("gautam");
         hashSet.add("subham");
         hashSet.add("arya");
+        hashSet.add("gautam");
 
         hashSet.stream().forEach(a -> System.out.println(a));
     }
