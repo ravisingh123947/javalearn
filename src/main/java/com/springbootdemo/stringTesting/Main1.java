@@ -3,16 +3,10 @@ package com.springbootdemo.stringTesting;
 public class Main1 {
     public static void main(String[] args) {
 
-       String name = "ravi";
-       String name1 = "ravi";
-        System.out.println(name1.hashCode());
-        System.out.println(name.hashCode());
-
-        System.out.println(name == name1);
-
-        String name2 =new String("ravi");
-        String name3 = new String("ravi");
-        System.out.println(name2 == name3);
+//       String name = "ravi";
+//       String name1 = "ravi";
+//        System.out.println(name1.hashCode());
+//        System.out.println(name.hashCode());
 
 //
 //     String name1 = "ravi";
@@ -26,9 +20,9 @@ public class Main1 {
 //        System.out.println(name1 == name3);
 //        System.out.println(name2 == name3);
 
-//        String name = "";
-//       if(name != null && !name.isEmpty()) {
-//           System.out.println("valid");
-//       }
+        String name = "";
+       if(name != null && !name.isEmpty()) {
+           System.out.println("valid");
+       }
     }
 }
