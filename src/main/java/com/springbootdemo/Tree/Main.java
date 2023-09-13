@@ -14,6 +14,5 @@ public class Main {
         Transverse transverse = new Transverse();
         transverse.inorderTraversal(head);
 
-        System.out.println(head.toString());
     }
 }
