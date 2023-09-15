@@ -5,19 +5,18 @@ import java.util.*;
 // This class represents an undirected graph using adjacency list representation
 class BreadthFirstSearch {
     private int numberOfVertices;
-    private LinkedList<Integer> adjacencyList[];
+    private LinkedList<LinkedList<Integer>> adjacencyList = new LinkedList<>();
 
     BreadthFirstSearch(int numberOfVertices) {
         this.numberOfVertices = numberOfVertices;
-        adjacencyList = new LinkedList[numberOfVertices];
         for (int i = 0; i < numberOfVertices; ++i)
-            adjacencyList[i] = new LinkedList<>();
+            adjacencyList.add(new LinkedList());
     }
 
     // Function to add an edge into the graph
     void addEdge(int from, int to) {
-        adjacencyList[from].add(to);
-        adjacencyList[to].add(from);
+        adjacencyList.get(from).add(to);
+        adjacencyList.get(to).add(from);
     }
 
     // Prints BFS traversal from a given source s
@@ -37,7 +36,7 @@ class BreadthFirstSearch {
             System.out.print(vertex + " ");
 
             // Get all adjacent vertices of the dequeued vertex
-            for (int n : adjacencyList[vertex]) {
+            for (int n : adjacencyList.get(vertex)) {
                 if (!visited[n]) {
                     // If an adjacent Vertex has not been visited, then mark it visited and enqueue it
                     visited[n] = true;
